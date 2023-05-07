@@ -1,0 +1,95 @@
+kalibrieren1:
+  icon: mdi:tune-vertical
+  alias: BW 1 kalibrierung
+  sequence:
+    - event: KALIBRIERUNG1
+      event_data:
+        sample: "{{ states('input_number.kalibrierungsprobe1') }}"
+
+tare1:
+  icon: mdi:lock-reset
+  alias: BW 1 leergewicht
+  sequence:
+    - event: LEERGEWICHT1
+      event_data:
+        tare: "{{ states('input_number.leergewicht1') }}"
+
+kalibrieren2:
+  icon: mdi:tune-vertical
+  alias: BW 2 kalibrierung
+  sequence:
+    - event: KALIBRIERUNG2
+      event_data:
+        sample: "{{ states('input_number.kalibrierungsprobe2') }}"
+
+tare2:
+  icon: mdi:lock-reset
+  alias: BW 2 leergewicht
+  sequence:
+    - event: LEERGEWICHT2
+      event_data:
+        tare: "{{ states('input_number.leergewicht2') }}"
+
+kalibrieren3:
+  icon: mdi:tune-vertical
+  alias: BW 3 kalibrierung
+  sequence:
+    - event: KALIBRIERUNG3
+      event_data:
+        sample: "{{ states('input_number.kalibrierungsprobe3') }}"
+
+tare3:
+  icon: mdi:lock-reset
+  alias: BW 3 leergewicht
+  sequence:
+    - event: LEERGEWICHT3
+      event_data:
+        tare: "{{ states('input_number.leergewicht3') }}"
+
+kalibrieren4:
+  icon: mdi:tune-vertical
+  alias: BW 4 kalibrierung
+  sequence:
+    - event: KALIBRIERUNG4
+      event_data:
+        sample: "{{ states('input_number.kalibrierungsprobe4') }}"
+
+tare4:
+  icon: mdi:lock-reset
+  alias: BW 4 leergewicht
+  sequence:
+    - event: LEERGEWICHT4
+      event_data:
+        tare: "{{ states('input_number.leergewicht4') }}"
+
+kalibrieren5:
+  icon: mdi:tune-vertical
+  alias: BW 5 kalibrierung
+  sequence:
+    - event: KALIBRIERUNG5
+      event_data:
+        sample: "{{ states('input_number.kalibrierungsprobe5') }}"
+
+tare5:
+  icon: mdi:lock-reset
+  alias: BW 5 leergewicht
+  sequence:
+    - event: LEERGEWICHT5
+      event_data:
+        tare: "{{ states('input_number.leergewicht5') }}"
+
+kalibrieren6:
+  icon: mdi:tune-vertical
+  alias: BW 6 kalibrierung
+  sequence:
+    - event: KALIBRIERUNG6
+      event_data:
+        sample: "{{ states('input_number.kalibrierungsprobe6') }}"
+
+tare6:
+  icon: mdi:lock-reset
+  alias: BW 6 leergewicht
+  sequence:
+    - event: LEERGEWICHT6
+      event_data:
+        tare: "{{ states('input_number.leergewicht6') }}"

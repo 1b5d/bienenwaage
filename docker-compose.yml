@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  homeassistant:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:2023.2.5
+    # image: ghcr.io/home-assistant/raspberrypi3-64-homeassistant:2023.2.5
+    # image: ghcr.io/home-assistant/home-assistant:2022.12.0
+    # image: ghcr.io/home-assistant/raspberrypi3-64-homeassistant:2022.12.0
+    volumes:
+      - ./homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    # ports:
+    #   - 80:80
+    environment:
+      - TZ=Europe/Berlin
+      # - DISABLE_JEMALLOC=true
+  appdaemon:
+    container_name: appdaemon
+    image: abedhawa/bienenwaage:latest
+    restart: unless-stopped
+    privileged: true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - 5050:5050
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/i2c-1:/dev/i2c-1
+      - /dev/gpiomem:/dev/gpiomem
+      - /dev/mem:/dev/mem
+    environment:
+      - HA_URL=http://host.docker.internal
+      - TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI4OGM4ZTFhMjQyNWU0N2Y4ODJkMmRjMjE2ODA0OGQzYSIsImlhdCI6MTY3MDk0NjczNiwiZXhwIjoxOTg2MzA2NzM2fQ.1Qsr4U1Vh7NQF16JqSkGmm3hEZ3zkUsMbLatOwTOxdU
+      - DASH_URL=http://dahoam:5050
+    volumes:
+      - appdaemon-data:/conf
+      - /etc/localtime:/etc/localtime:ro
+
+volumes:
+  appdaemon-data:

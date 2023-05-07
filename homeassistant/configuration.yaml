@@ -1,0 +1,247 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+api:
+
+http:
+  server_port: 80
+  use_x_forwarded_for: true
+
+homeassistant:
+  internal_url: "http://dahoam:80"
+
+recorder:
+  commit_interval: 30
+  purge_keep_days: 180
+
+template:
+  - sensor:
+      - name: "Bienenwaage 1"
+        unique_id: sensor.bienenwaage1
+        icon: mdi:beehive-outline
+        state: "{{ states('input_number.bienenwaage_raw1') | int }}"
+        unit_of_measurement: g
+        device_class: weight
+  - sensor:
+      - name: "Bienenwaage 2"
+        unique_id: sensor.bienenwaage2
+        icon: mdi:beehive-outline
+        state: "{{ states('input_number.bienenwaage_raw2') | int }}"
+        unit_of_measurement: g
+        device_class: weight
+  - sensor:
+      - name: "Bienenwaage 3"
+        unique_id: sensor.bienenwaage3
+        icon: mdi:beehive-outline
+        state: "{{ states('input_number.bienenwaage_raw3') | int }}"
+        unit_of_measurement: g
+        device_class: weight
+  - sensor:
+      - name: "Bienenwaage 4"
+        unique_id: sensor.bienenwaage4
+        icon: mdi:beehive-outline
+        state: "{{ states('input_number.bienenwaage_raw4') | int }}"
+        unit_of_measurement: g
+        device_class: weight
+  - sensor:
+      - name: "Bienenwaage 5"
+        unique_id: sensor.bienenwaage5
+        icon: mdi:beehive-outline
+        state: "{{ states('input_number.bienenwaage_raw5') | int }}"
+        unit_of_measurement: g
+        device_class: weight
+  - sensor:
+      - name: "Bienenwaage 6"
+        unique_id: sensor.bienenwaage6
+        icon: mdi:beehive-outline
+        state: "{{ states('input_number.bienenwaage_raw6') | int }}"
+        unit_of_measurement: g
+        device_class: weight
+
+input_number:
+  bienenwaage_raw1:
+    name: "Bienenwaage raw1"
+    unit_of_measurement: g
+    min: -200000
+    max: 200000
+    step: 0.001
+    icon: mdi:beehive-outline
+    mode: box
+  bienenwaage_refunit1:
+    name: "Bienenwaage refunit1"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  kalibrierungsprobe1:
+    name: "Kalibrierungsprobe 1"
+    min: 1
+    max: 200000
+    step: 1
+    icon: mdi:thermometer-probe
+    mode: box
+  leergewicht1:
+    name: "Leergewicht 1"
+    min: -200000
+    max: 200000
+    step: 1
+    unit_of_measurement: g
+    icon: mdi:circle-outline
+    mode: box
+  bienenwaage_raw2:
+    name: "Bienenwaage raw2"
+    unit_of_measurement: g
+    min: -200000
+    max: 200000
+    step: 0.001
+    icon: mdi:beehive-outline
+    mode: box
+  bienenwaage_refunit2:
+    name: "Bienenwaage refunit2"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  kalibrierungsprobe2:
+    name: "Kalibrierungsprobe 2"
+    min: 1
+    max: 200000
+    step: 1
+    icon: mdi:thermometer-probe
+    mode: box
+  leergewicht2:
+    name: "Leergewicht 2"
+    min: -200000
+    max: 200000
+    step: 1
+    unit_of_measurement: g
+    icon: mdi:circle-outline
+    mode: box
+  bienenwaage_raw3:
+    name: "Bienenwaage raw3"
+    unit_of_measurement: g
+    min: -200000
+    max: 200000
+    step: 0.001
+    icon: mdi:beehive-outline
+    mode: box
+  bienenwaage_refunit3:
+    name: "Bienenwaage refunit3"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  kalibrierungsprobe3:
+    name: "Kalibrierungsprobe 3"
+    min: 1
+    max: 200000
+    step: 1
+    icon: mdi:thermometer-probe
+    mode: box
+  leergewicht3:
+    name: "Leergewicht 3"
+    min: -200000
+    max: 200000
+    step: 1
+    unit_of_measurement: g
+    icon: mdi:circle-outline
+    mode: box
+  bienenwaage_raw4:
+    name: "Bienenwaage raw4"
+    unit_of_measurement: g
+    min: -200000
+    max: 200000
+    step: 0.001
+    icon: mdi:beehive-outline
+    mode: box
+  bienenwaage_refunit4:
+    name: "Bienenwaage refunit4"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  kalibrierungsprobe4:
+    name: "Kalibrierungsprobe 4"
+    min: 1
+    max: 200000
+    step: 1
+    icon: mdi:thermometer-probe
+    mode: box
+  leergewicht4:
+    name: "Leergewicht 4"
+    min: -200000
+    max: 200000
+    step: 1
+    unit_of_measurement: g
+    icon: mdi:circle-outline
+    mode: box
+  bienenwaage_raw5:
+    name: "Bienenwaage raw5"
+    unit_of_measurement: g
+    min: -200000
+    max: 200000
+    step: 0.001
+    icon: mdi:beehive-outline
+    mode: box
+  bienenwaage_refunit5:
+    name: "Bienenwaage refunit5"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  kalibrierungsprobe5:
+    name: "Kalibrierungsprobe 5"
+    min: 1
+    max: 200000
+    step: 1
+    icon: mdi:thermometer-probe
+    mode: box
+  leergewicht5:
+    name: "Leergewicht 5"
+    min: -200000
+    max: 200000
+    step: 1
+    unit_of_measurement: g
+    icon: mdi:circle-outline
+    mode: box
+  bienenwaage_raw6:
+    name: "Bienenwaage raw6"
+    unit_of_measurement: g
+    min: -200000
+    max: 200000
+    step: 0.001
+    icon: mdi:beehive-outline
+    mode: box
+  bienenwaage_refunit6:
+    name: "Bienenwaage refunit6"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  kalibrierungsprobe6:
+    name: "Kalibrierungsprobe 6"
+    min: 1
+    max: 200000
+    step: 1
+    icon: mdi:thermometer-probe
+    mode: box
+  leergewicht6:
+    name: "Leergewicht 6"
+    min: -200000
+    max: 200000
+    step: 1
+    unit_of_measurement: g
+    icon: mdi:circle-outline
+    mode: box

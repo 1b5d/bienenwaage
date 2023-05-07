@@ -1,0 +1,18 @@
+appdaemon:
+  latitude: 48.216329
+  longitude: 12.131212
+  elevation: 534
+  time_zone: Europe/Berlin
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://homeassistant
+#      plugin_startup_conditions:
+#        state: {entity: input_number.bienenwaage_raw1}
+      appdaemon_startup_conditions:
+        state: {entity: input_number.bienenwaage_raw1}
+      token: 
+http:
+  url: http://dahoam:5050
+admin:
+api:

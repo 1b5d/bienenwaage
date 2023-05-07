@@ -1,0 +1,69 @@
+bienenwaage1:
+  module: bienenwaage
+  class: Bienenwaage
+  sensor: input_number.bienenwaage_raw1
+  refunit_sensor: input_number.bienenwaage_refunit1
+  calibration_event: KALIBRIERUNG1
+  tare_event: LEERGEWICHT1
+  dout: 5
+  pd_sck: 6
+  gain: 128
+bienenwaage2:
+  module: bienenwaage
+  class: Bienenwaage
+  sensor: input_number.bienenwaage_raw2
+  refunit_sensor: input_number.bienenwaage_refunit2
+  calibration_event: KALIBRIERUNG2
+  tare_event: LEERGEWICHT2
+  dout: 13
+  pd_sck: 19
+  gain: 128
+bienenwaage3:
+  module: bienenwaage
+  class: Bienenwaage
+  sensor: input_number.bienenwaage_raw3
+  refunit_sensor: input_number.bienenwaage_refunit3
+  calibration_event: KALIBRIERUNG3
+  tare_event: LEERGEWICHT3
+  dout: 17
+  pd_sck: 27
+  gain: 128
+bienenwaage4:
+  module: bienenwaage
+  class: Bienenwaage
+  sensor: input_number.bienenwaage_raw4
+  refunit_sensor: input_number.bienenwaage_refunit4
+  calibration_event: KALIBRIERUNG4
+  tare_event: LEERGEWICHT4
+  dout: 20
+  pd_sck: 21
+  gain: 128
+bienenwaage5:
+  module: bienenwaage
+  class: Bienenwaage
+  sensor: input_number.bienenwaage_raw5
+  refunit_sensor: input_number.bienenwaage_refunit5
+  calibration_event: KALIBRIERUNG5
+  tare_event: LEERGEWICHT5
+  dout: 12
+  pd_sck: 16
+  gain: 128
+bienenwaage6:
+  module: bienenwaage
+  class: Bienenwaage
+  sensor: input_number.bienenwaage_raw6
+  refunit_sensor: input_number.bienenwaage_refunit6
+  calibration_event: KALIBRIERUNG6
+  tare_event: LEERGEWICHT6
+  dout: 23
+  pd_sck: 24
+  gain: 128
+display:
+  module: display
+  class: Display
+  sensor1: input_number.bienenwaage_raw1
+  sensor2: input_number.bienenwaage_raw2
+  sensor3: input_number.bienenwaage_raw3
+  sensor4: input_number.bienenwaage_raw4
+  sensor5: input_number.bienenwaage_raw5
+  sensor6: input_number.bienenwaage_raw6
