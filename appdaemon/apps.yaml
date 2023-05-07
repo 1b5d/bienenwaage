@@ -3,6 +3,7 @@ bienenwaage1:
   class: Bienenwaage
   sensor: input_number.bienenwaage_raw1
   refunit_sensor: input_number.bienenwaage_refunit1
+  offset_sensor: input_number.bienenwaage_offset1
   calibration_event: KALIBRIERUNG1
   tare_event: LEERGEWICHT1
   dout: 5
@@ -13,6 +14,7 @@ bienenwaage2:
   class: Bienenwaage
   sensor: input_number.bienenwaage_raw2
   refunit_sensor: input_number.bienenwaage_refunit2
+  offset_sensor: input_number.bienenwaage_offset2
   calibration_event: KALIBRIERUNG2
   tare_event: LEERGEWICHT2
   dout: 13
@@ -23,6 +25,7 @@ bienenwaage3:
   class: Bienenwaage
   sensor: input_number.bienenwaage_raw3
   refunit_sensor: input_number.bienenwaage_refunit3
+  offset_sensor: input_number.bienenwaage_offset3
   calibration_event: KALIBRIERUNG3
   tare_event: LEERGEWICHT3
   dout: 17
@@ -33,6 +36,7 @@ bienenwaage4:
   class: Bienenwaage
   sensor: input_number.bienenwaage_raw4
   refunit_sensor: input_number.bienenwaage_refunit4
+  offset_sensor: input_number.bienenwaage_offset4
   calibration_event: KALIBRIERUNG4
   tare_event: LEERGEWICHT4
   dout: 20
@@ -43,6 +47,7 @@ bienenwaage5:
   class: Bienenwaage
   sensor: input_number.bienenwaage_raw5
   refunit_sensor: input_number.bienenwaage_refunit5
+  offset_sensor: input_number.bienenwaage_offset5
   calibration_event: KALIBRIERUNG5
   tare_event: LEERGEWICHT5
   dout: 12
@@ -53,6 +58,7 @@ bienenwaage6:
   class: Bienenwaage
   sensor: input_number.bienenwaage_raw6
   refunit_sensor: input_number.bienenwaage_refunit6
+  offset_sensor: input_number.bienenwaage_offset6
   calibration_event: KALIBRIERUNG6
   tare_event: LEERGEWICHT6
   dout: 23

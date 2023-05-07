@@ -17,7 +17,6 @@ api:
 
 http:
   server_port: 80
-  use_x_forwarded_for: true
 
 homeassistant:
   internal_url: "http://dahoam:80"
@@ -85,6 +84,12 @@ input_number:
     min: -200000
     max: 200000
     mode: box
+  bienenwaage_offset1:
+    name: "Bienenwaage offset1"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
   kalibrierungsprobe1:
     name: "Kalibrierungsprobe 1"
     min: 1
@@ -110,6 +115,12 @@ input_number:
     mode: box
   bienenwaage_refunit2:
     name: "Bienenwaage refunit2"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  bienenwaage_offset2:
+    name: "Bienenwaage offset2"
     step: 0.001
     min: -200000
     max: 200000
@@ -143,6 +154,12 @@ input_number:
     min: -200000
     max: 200000
     mode: box
+  bienenwaage_offset3:
+    name: "Bienenwaage offset3"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
   kalibrierungsprobe3:
     name: "Kalibrierungsprobe 3"
     min: 1
@@ -168,6 +185,12 @@ input_number:
     mode: box
   bienenwaage_refunit4:
     name: "Bienenwaage refunit4"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  bienenwaage_offset4:
+    name: "Bienenwaage offset4"
     step: 0.001
     min: -200000
     max: 200000
@@ -201,6 +224,12 @@ input_number:
     min: -200000
     max: 200000
     mode: box
+  bienenwaage_offset5:
+    name: "Bienenwaage offset5"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
   kalibrierungsprobe5:
     name: "Kalibrierungsprobe 5"
     min: 1
@@ -226,6 +255,12 @@ input_number:
     mode: box
   bienenwaage_refunit6:
     name: "Bienenwaage refunit6"
+    step: 0.001
+    min: -200000
+    max: 200000
+    mode: box
+  bienenwaage_offset6:
+    name: "Bienenwaage offset6"
     step: 0.001
     min: -200000
     max: 200000
