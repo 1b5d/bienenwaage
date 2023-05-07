@@ -7,10 +7,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
   homeassistant:
     container_name: homeassistant
-    image: ghcr.io/home-assistant/home-assistant:2023.2.5
-    # image: ghcr.io/home-assistant/raspberrypi3-64-homeassistant:2023.2.5
-    # image: ghcr.io/home-assistant/home-assistant:2022.12.0
-    # image: ghcr.io/home-assistant/raspberrypi3-64-homeassistant:2022.12.0
+    image: ${HASS_IMAGE}
     volumes:
       - ./homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
@@ -39,8 +36,8 @@ services:
       - /dev/mem:/dev/mem
     environment:
       - HA_URL=http://host.docker.internal
-      - TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI4OGM4ZTFhMjQyNWU0N2Y4ODJkMmRjMjE2ODA0OGQzYSIsImlhdCI6MTY3MDk0NjczNiwiZXhwIjoxOTg2MzA2NzM2fQ.1Qsr4U1Vh7NQF16JqSkGmm3hEZ3zkUsMbLatOwTOxdU
-      - DASH_URL=http://dahoam:5050
+      - TOKEN=${HASS_TOKEN}
+      - DASH_URL=${HASS_URL}
     volumes:
       - appdaemon-data:/conf
       - /etc/localtime:/etc/localtime:ro
